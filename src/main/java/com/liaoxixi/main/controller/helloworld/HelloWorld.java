@@ -1,11 +1,11 @@
-package com.liaoxixi;
+package com.liaoxixi.main.controller.helloworld;
 
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class Test {
+public class HelloWorld {
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/helloWorld")
     public String hello() {
         return "are you OK?";
     }

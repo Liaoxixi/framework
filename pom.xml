@@ -38,6 +38,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+        <!-- 应用快速重启 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -50,6 +57,7 @@
 				<configuration>
 					<mainClass>${mainClass}</mainClass>
 					<layout>ZIP</layout>
+                    <fork>true</fork>   <!-- 使用mvn spring-boot:run启动时, devtools需要该配置(DevTools需要一个隔离的应用类加载器执行正确的操作) -->
 				</configuration>
 				<executions>
 					<execution>

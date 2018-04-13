@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @SpringBootApplication包含@Configuration, @EnableAutoConfiguration, @ComponentScan
+ */
 @SpringBootApplication
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
 public class Application {
 
     public static void main(String[] args) throws Exception {
